@@ -2,6 +2,7 @@ package com.example.persondemo.service;
 
 import com.example.persondemo.model.Person;
 import com.example.persondemo.repository.PersonRepository;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,10 @@ public class PersonServiceImpl implements PersonService{
   @Override
   public Person save(Person person) {
     return personRepository.save(person);
+  }
+
+  @Override
+  public List<Person> findAll() {
+    return personRepository.findAll();
   }
 }
